@@ -26,13 +26,15 @@ namespace ENDPOINT
         }
 
         // Méthode pour ajouter un contact
-        public string SelectTest()
+        public string SelectTest(string code)
         {
             string res = "";
-
             try
             {
-                string sql = "SHOW TABLES;";
+                //string sql = "SHOW TABLES;";*
+
+                string sql = $"SELECT * FROM promotion INNER JOIN codePromo on promotion.numeroPromotion = codePromo.numeroPromotion WHERE codePromo.Qrcode = '{code}';";
+
                 // Créez un objet Command.
                 MySqlCommand cmd = new MySqlCommand();
 
@@ -47,9 +49,9 @@ namespace ENDPOINT
                     if (reader.HasRows)
                     {
                         while (reader.Read())
-                        {                          
-                            Console.WriteLine("Res :" + reader.GetString(0));
-                            res += reader.GetString(0) + " ";
+                        {
+                            res += $"Promotion n°{reader.GetString(0)} ; Reduction de {reader.GetString(1)}% pour un minimum d'achat de {reader.GetString(1)} euros jusqu'au {reader.GetString(3)}.";
+                            Console.WriteLine(res);
                         }
                     }
                 }
