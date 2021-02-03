@@ -15,7 +15,7 @@ namespace ENDPOINT
         static void Main(string[] args)
         {
             _listener = new HttpListener();
-            _listener.Prefixes.Add("http://seandriard.xyz:420/");
+            _listener.Prefixes.Add("http://127.0.0.1:420/");
             _listener.Start();
             _listener.BeginGetContext(OnContext, null);
             Console.WriteLine("Listening..");
@@ -38,7 +38,7 @@ namespace ENDPOINT
             //Thread.Sleep(4000);
             // Création de l'objet Bdd pour l'intéraction avec la base de donnée MySQL
             Mysql bdd = new Mysql();
-            string res = bdd.SelectTest(code);
+            string res = bdd.getPromo(code);
 
 
             //Et on répond a l'appli si c ok ou pas

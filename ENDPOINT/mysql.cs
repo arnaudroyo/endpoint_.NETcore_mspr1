@@ -30,8 +30,8 @@ namespace ENDPOINT
             this.connection = new MySqlConnection(connectionString);
         }
 
-        // Méthode pour ajouter un contact
-        public string SelectTest(string code)
+        // Méthode pour recup les info du code
+        public string getPromo(string code)
         {
             string json="false";
             try
