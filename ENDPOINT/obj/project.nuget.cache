@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "H/r6t0dxZ/UUdjUECu87QWLLpjIKUAd0AF6EcrfelFPVcvE5WaVoDsWOW7+PbXoy6BfBTi3j7Zd9ZYmiB/fFtA==",
+  "dgSpecHash": "ITMI3KJJ7Q1Do4UZgiqkoKsBo/PfJSgr3881hFLo1C/nwsLYmyU5GHWDZYfdWtRrgb2soDV6gy3da7xF8c0hlw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Arnaud\\OneDrive - Ifag Paris\\EPSI\\B3\\MSPR\\endpoint_.NETcore_mspr1\\ENDPOINT\\ENDPOINT.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,7 @@
     "C:\\Users\\Arnaud\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Arnaud\\.nuget\\packages\\mysql.data\\8.0.22\\mysql.data.8.0.22.nupkg.sha512",
     "C:\\Users\\Arnaud\\.nuget\\packages\\netstandard.library\\1.6.0\\netstandard.library.1.6.0.nupkg.sha512",
+    "C:\\Users\\Arnaud\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\Arnaud\\.nuget\\packages\\runtime.native.system\\4.0.0\\runtime.native.system.4.0.0.nupkg.sha512",
     "C:\\Users\\Arnaud\\.nuget\\packages\\runtime.native.system.io.compression\\4.1.0\\runtime.native.system.io.compression.4.1.0.nupkg.sha512",
     "C:\\Users\\Arnaud\\.nuget\\packages\\runtime.native.system.net.http\\4.0.1\\runtime.native.system.net.http.4.0.1.nupkg.sha512",

@@ -37,3 +37,4 @@ C:\Users\Arnaud\OneDrive - Ifag Paris\EPSI\B3\MSPR\endpoint_.NETcore_mspr1\ENDPO
 C:\Users\Arnaud\OneDrive - Ifag Paris\EPSI\B3\MSPR\endpoint_.NETcore_mspr1\ENDPOINT\obj\Debug\net5.0\ref\ENDPOINT.dll
 C:\Users\Arnaud\OneDrive - Ifag Paris\EPSI\B3\MSPR\endpoint_.NETcore_mspr1\ENDPOINT\obj\Debug\net5.0\ENDPOINT.pdb
 C:\Users\Arnaud\OneDrive - Ifag Paris\EPSI\B3\MSPR\endpoint_.NETcore_mspr1\ENDPOINT\obj\Debug\net5.0\ENDPOINT.genruntimeconfig.cache
+C:\Users\Arnaud\OneDrive - Ifag Paris\EPSI\B3\MSPR\endpoint_.NETcore_mspr1\ENDPOINT\bin\Debug\net5.0\Newtonsoft.Json.dll

@@ -1,8 +1,12 @@
 ﻿using MySql.Data.MySqlClient;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Text;
+
+using System.Text.Json;
+
 
 namespace ENDPOINT
 {
@@ -20,6 +24,7 @@ namespace ENDPOINT
         // Méthode pour initialiser la connexion
         private void InitConnexion()
         {
+            //
             // Création de la chaîne de connexion
             this.connectionString = "SERVER=217.69.0.125; DATABASE=GoStyle; UID=mspr; PASSWORD=asdf";
             this.connection = new MySqlConnection(connectionString);
@@ -28,7 +33,7 @@ namespace ENDPOINT
         // Méthode pour ajouter un contact
         public string SelectTest(string code)
         {
-            string res = "";
+            string json="false";
             try
             {
                 //string sql = "SHOW TABLES;";*
@@ -50,17 +55,20 @@ namespace ENDPOINT
                     {
                         while (reader.Read())
                         {
-                            res += $"Promotion n°{reader.GetString(0)} ; Reduction de {reader.GetString(1)}% pour un minimum d'achat de {reader.GetString(1)} euros jusqu'au {reader.GetString(3)}.";
-                            Console.WriteLine(res);
+                            Code myCode = new Code(int.Parse(reader.GetString(0)), int.Parse(reader.GetString(1)), DateTime.Parse(reader.GetString(3)), int.Parse(reader.GetString(4)), reader.GetString(8));
+                            json = System.Text.Json.JsonSerializer.Serialize(myCode); //Instead of use JsonConvert.SerializeObject(x.Action);
+
+                            Console.WriteLine(json);
+
                         }
                     }
                 }
-                return res;
+                return json;
             }
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                return res;
+                return json;
 
             }
             finally
