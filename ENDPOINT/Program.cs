@@ -15,7 +15,7 @@ namespace ENDPOINT
         static void Main(string[] args)
         {
             _listener = new HttpListener();
-            _listener.Prefixes.Add("http://127.0.0.1:420/");
+            _listener.Prefixes.Add("http://78.198.222.128:420/");
             _listener.Start();
             _listener.BeginGetContext(OnContext, null);
             Console.WriteLine("Listening..");
