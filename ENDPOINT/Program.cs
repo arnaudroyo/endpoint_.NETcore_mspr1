@@ -42,7 +42,7 @@ namespace ENDPOINT
 
 
             //Et on répond a l'appli si c ok ou pas
-            var buf = Encoding.ASCII.GetBytes($"Code : {code}\nResponse : " + res);
+            var buf = Encoding.ASCII.GetBytes(res);
             ctx.Response.ContentType = "text/plain";
 
             ctx.Response.OutputStream.Write(buf, 0, buf.Length);
