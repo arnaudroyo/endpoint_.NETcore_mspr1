@@ -26,7 +26,7 @@ namespace ENDPOINT
         {
             //
             // Création de la chaîne de connexion
-            this.connectionString = "SERVER=217.69.0.125; DATABASE=GoStyle; UID=mspr; PASSWORD=asdf";
+            this.connectionString = "SERVER=localhost; DATABASE=GoStyle; UID=mspr; PASSWORD=asdf";
             this.connection = new MySqlConnection(connectionString);
         }
 
