@@ -24,7 +24,6 @@ namespace ENDPOINT
         // Méthode pour initialiser la connexion
         private void InitConnexion()
         {
-            //
             // Création de la chaîne de connexion
             this.connectionString = "SERVER=localhost; DATABASE=GoStyle; UID=mspr; PASSWORD=asdf";
             this.connection = new MySqlConnection(connectionString);
@@ -39,7 +38,6 @@ namespace ENDPOINT
                 //string sql = "SHOW TABLES;";*
 
                 string sql = $"SELECT * FROM promotion INNER JOIN codePromo on promotion.numeroPromotion = codePromo.numeroPromotion WHERE codePromo.Qrcode = '{code}';";
-
                 // Créez un objet Command.
                 MySqlCommand cmd = new MySqlCommand();
 

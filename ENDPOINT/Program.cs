@@ -34,14 +34,14 @@ namespace ENDPOINT
 
             Console.WriteLine(DateTime.UtcNow.ToString("HH:mm:ss.fff") + $" Handling request with code = {code}");
 
-            // la faut ask la bdd (simul wait)
-            //Thread.Sleep(4000);
             // Création de l'objet Bdd pour l'intéraction avec la base de donnée MySQL
+
+            string res = "false";
             Mysql bdd = new Mysql();
-            string res = bdd.getPromo(code);
+            res = bdd.getPromo(code);
 
 
-            //Et on répond a l'appli si c ok ou pas
+            //Et on répond à l'appli si c'est ok ou pas en fonction de la réponse de bdd.getPromo
             var buf = Encoding.ASCII.GetBytes(res);
             ctx.Response.ContentType = "text/plain";
 
